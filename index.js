@@ -5,12 +5,6 @@ let myHeadingCount = myHeading.length;
 myHeading.addEventListener('mouseenter', () => myHeading.textContent = 'patrick');
 myHeading.addEventListener('mouseleave', () => myHeading.textContent = 'pratiques');
 
-// if (rlq === 3) {
-//     console.log("ça fait mal")
-//     window.alert("Hello world!");
-//     alert("ça fait mal...");
-// }
-
 let myImage = document.querySelector('img');
 
 myImage.addEventListener('click', function () {
@@ -22,19 +16,26 @@ myImage.addEventListener('click', function () {
     }
 });
 
+// --------------------  Script change user -----------------//
+
 let myButton = document.querySelector('button');
 let myText = document.querySelector('.change');
 
-
 function setUserName() {
-    let myName = prompt('Veuillez choisir un nom');
+    let myName = prompt('Veuillez saisir un nom');
     localStorage.setItem('nom', myName);
-    myText.textContent = 'Bienvenue sur mon site de test JS ' + myName;
+    myText.textContent = 'Bienvenue sur mon site de test JS ' + myName + ' !';
 }
 
 if (!localStorage.getItem('nom')) {
     setUserName;
 } else {
     let storedName = localStorage.getItem('nom');
-    myText.textContent = 'Bienvenue sur mon site de test JS ' + storedName;
+    myText.textContent = 'Bienvenue sur mon site de test JS ' + storedName + ' !';
 }
+
+myButton.addEventListener('click', function() {
+    setUserName();
+})
+
+

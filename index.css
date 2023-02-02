@@ -1,13 +1,3 @@
-body {
-    width: 100%;
-}
-
-.title:hover {}
-
-img {
-    width: 100%;
-}
-
-.images {
-    border: 3px solid black;
+.image {
+    width: 100vw;
 }

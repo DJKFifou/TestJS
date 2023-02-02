@@ -43,7 +43,7 @@ myButton.addEventListener('click', function () {
     setUserName();
 });
 
-
+// ------------------------------ Jeu du nombre juste ------------------------------ //
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -61,7 +61,7 @@ guessField.focus();
 function checkGuess() {
     let userGuess = Number(guessField.value);
     if (guessCount === 1) {
-        guesses.textContent = 'Propositions précédentes&nbsp;: ';
+        guesses.textContent = 'Propositions précédentes : ';
     }
     guesses.textContent += userGuess + ' ';
 
@@ -71,10 +71,10 @@ function checkGuess() {
         lowOrHi.textContent = '';
         setGameOver();
     } else if (guessCount === 10) {
-        lastResult.textContent = '!!! PERDU&nbsp;!!!';
+        lastResult.textContent = '!!! PERDU !!!';
         setGameOver();
     } else {
-        lastResult.textContent = 'Faux&nbsp;!';
+        lastResult.textContent = 'Faux !';
         lastResult.style.backgroundColor = 'red';
         if (userGuess < randomNumber) {
             lowOrHi.textContent = 'Le nombre saisi est trop petit !';

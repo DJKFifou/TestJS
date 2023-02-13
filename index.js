@@ -120,3 +120,98 @@ function resetGame() {
 
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
+
+// --------------------------------- Addition --------------------------------- //
+
+let firstValue = document.querySelector(".firstValue");
+let secondValue = document.querySelector(".secondValue");
+
+let result = document.querySelector(".result");
+let btnResult = document.querySelector(".btnResult");
+
+btnResult.addEventListener('click', function () {
+    let first = Number(firstValue.value);
+    let second = Number(secondValue.value);
+    let end = first + second;
+    if (firstValue.value == 0 && secondValue.value == 0) {
+        result.textContent = 'Veuillez saisir deux nombres à additionner';
+    } else {
+        result.textContent = end;
+    }
+});
+
+// --------------------------------- Division --------------------------------- //
+
+let firstValueSous = document.querySelector(".firstValueSous");
+let secondValueSous = document.querySelector(".secondValueSous");
+
+let resultSous = document.querySelector(".resultSous");
+let btnResultSous = document.querySelector(".btnResultSous");
+
+btnResultSous.addEventListener('click', function () {
+    let firstSous = Number(firstValueSous.value);
+    let secondSous = Number(secondValueSous.value);
+    let end = firstSous - secondSous;
+    if (firstValueSous.value == 0 && secondValueSous.value == 0) {
+        resultSous.textContent = 'Veuillez saisir deux nombres à additionner';
+    } else {
+        resultSous.textContent = end;
+    }
+});
+
+// --------------------------------- Multiplication --------------------------------- //
+
+let firstValueMult = document.querySelector(".firstValueMult");
+let secondValueMult = document.querySelector(".secondValueMult");
+
+let resultMult = document.querySelector(".resultMult");
+let btnResultMult = document.querySelector(".btnResultMult");
+
+btnResultMult.addEventListener('click', function () {
+    let firstMult = Number(firstValueMult.value);
+    let secondMult = Number(secondValueMult.value);
+    let end = firstMult * secondMult;
+    if (firstValueMult.value == 0 && secondValueMult.value == 0) {
+        resultMult.textContent = 'Veuillez saisir deux nombres à additionner';
+    } else {
+        resultMult.textContent = end;
+    }
+});
+
+// --------------------------------- Division --------------------------------- //
+
+let firstValueDiv = document.querySelector(".firstValueDiv");
+let secondValueDiv = document.querySelector(".secondValueDiv");
+
+let resultDiv = document.querySelector(".resultDiv");
+let btnResultDiv = document.querySelector(".btnResultDiv");
+
+btnResultDiv.addEventListener('click', function () {
+    let firstDiv = Number(firstValueDiv.value);
+    let secondDiv = Number(secondValueDiv.value);
+    let end = firstDiv / secondDiv;
+    if (firstValueDiv.value == 0 && secondValueDiv.value == 0) {
+        resultDiv.textContent = 'Veuillez saisir deux nombres à additionner';
+    } else {
+        resultDiv.textContent = end;
+    }
+});
+
+// --------------------------------- Division --------------------------------- //
+
+let firstValueMod = document.querySelector(".firstValueMod");
+let secondValueMod = document.querySelector(".secondValueMod");
+
+let resultMod = document.querySelector(".resultMod");
+let btnResultMod = document.querySelector(".btnResultMod");
+
+btnResultMod.addEventListener('click', function () {
+    let firstMod = Number(firstValueMod.value);
+    let secondMod = Number(secondValueMod.value);
+    let end = firstMod % secondMod;
+    if (firstValueMod.value == 0 && secondValueMod.value == 0) {
+        resultMod.textContent = 'Veuillez saisir deux nombres à additionner';
+    } else {
+        resultMod.textContent = end;
+    }
+});

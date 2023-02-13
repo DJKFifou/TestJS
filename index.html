@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Script JS</title>
-    <link href="index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -43,6 +43,70 @@
     Empêcher que le joueur saisisse de nouveau un nombre.
     Afficher un contrôle pour que le joueur puisse rejouer.
     Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1. -->
+
+    <label for="guessField"></label>
+    <input type="text" class="guessField">
+    <input type="submit" class="guessSubmit">
+
+    <div>
+        <p>Additionner 2 nombres :</p>
+        <div class="numberGame">
+            <input type="text" class="firstValue">
+            <label for="additionSign"> + </label>
+            <input type="text" class="secondValue">
+            <label for="resultSign"> = </label>
+            <label class="result"></label>
+        </div>
+        <button class="btn btnResult">Calculer</button>
+    </div>
+
+    <div>
+        <p>Soustraire 2 nombres :</p>
+        <div class="numberGame">
+            <input type="text" class="firstValueSous">
+            <label for="additionSign"> - </label>
+            <input type="text" class="secondValueSous">
+            <label for="resultSign"> = </label>
+            <label class="resultSous"></label>
+        </div>
+        <button class="btn btnResultSous">Calculer</button>
+    </div>
+
+    <div>
+        <p>Multiplier 2 nombres :</p>
+        <div class="numberGame">
+            <input type="text" class="firstValueMult">
+            <label for="additionSign"> * </label>
+            <input type="text" class="secondValueMult">
+            <label for="resultSign"> = </label>
+            <label class="resultMult"></label>
+        </div>
+        <button class="btn btnResultMult">Calculer</button>
+    </div>
+
+    <div>
+        <p>Diviser 2 nombres :</p>
+        <div class="numberGame">
+            <input type="text" class="firstValueDiv">
+            <label for="additionSign"> / </label>
+            <input type="text" class="secondValueDiv">
+            <label for="resultSign"> = </label>
+            <label class="resultDiv"></label>
+        </div>
+        <button class="btn btnResultDiv">Calculer</button>
+    </div>
+
+    <div>
+        <p>Modulo de 2 nombres :</p>
+        <div class="numberGame">
+            <input type="text" class="firstValueMod">
+            <label for="additionSign"> / </label>
+            <input type="text" class="secondValueMod">
+            <label for="resultSign"> = </label>
+            <label class="resultMod"></label>
+        </div>
+        <button class="btn btnResultMod">Calculer</button>
+    </div>
 
     <script src="index.js"></script>
 </body>

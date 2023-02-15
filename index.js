@@ -38,81 +38,81 @@ myButton.addEventListener('click', function() {
     setUserName();
 })
 
+// --------------------  Jeu trouver numéro -----------------//
 
+// let guesses = document.querySelector('.guesses');
+// let lastResult = document.querySelector('.lastResult');
+// let lowOrHi = document.querySelector('.lowOrHi');
 
-let guesses = document.querySelector('.guesses');
-let lastResult = document.querySelector('.lastResult');
-let lowOrHi = document.querySelector('.lowOrHi');
+// let guessSubmit = document.querySelector('.guessSubmit');
+// let guessField = document.querySelector('.guessField');
 
-let guessSubmit = document.querySelector('.guessSubmit');
-let guessField = document.querySelector('.guessField');
+// let guessCount = 1;
+// let resetButton;
+// guessField.focus();
 
-let guessCount = 1;
-let resetButton;
-guessField.focus();
+// function checkGuess() {
+//     let userGuess = Number(guessField.value);
+//     if (guessCount === 1) {
+//         guesses.textContent = 'Propositions précédentes : ';
+//     }
+//     guesses.textContent += userGuess + ' ';
 
-function checkGuess() {
-    let userGuess = Number(guessField.value);
-    if (guessCount === 1) {
-        guesses.textContent = 'Propositions précédentes : ';
-    }
-    guesses.textContent += userGuess + ' ';
+//     if (userGuess === randomNumber) {
+//         lastResult.textContent = 'Bravo, vous avez trouvé le nombre !';
+//         lastResult.style.backgroundColor = 'green';
+//         lowOrHi.textContent = '';
+//         setGameOver();
+//     } else if (guessCount === 10) {
+//         lastResult.textContent = '!!! PERDU !!!';
+//         setGameOver();
+//     } else {
+//         lastResult.textContent = 'Faux !';
+//         lastResult.style.backgroundColor = 'red';
+//         if (userGuess < randomNumber) {
+//             lowOrHi.textContent = 'Le nombre saisi est trop petit !';
+//         } else if (userGuess > randomNumber) {
+//             lowOrHi.textContent = 'Le nombre saisi est trop grand !';
+//         }
+//     }
 
-    if (userGuess === randomNumber) {
-        lastResult.textContent = 'Bravo, vous avez trouvé le nombre !';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
-        setGameOver();
-    } else if (guessCount === 10) {
-        lastResult.textContent = '!!! PERDU !!!';
-        setGameOver();
-    } else {
-        lastResult.textContent = 'Faux !';
-        lastResult.style.backgroundColor = 'red';
-        if (userGuess < randomNumber) {
-            lowOrHi.textContent = 'Le nombre saisi est trop petit !';
-        } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = 'Le nombre saisi est trop grand !';
-        }
-    }
+//     guessCount++;
+//     guessField.value = '';
+//     guessField.focus();
+// }
 
-    guessCount++;
-    guessField.value = '';
-    guessField.focus();
-}
+// guessSubmit.addEventListener('click', checkGuess);
 
-guessSubmit.addEventListener('click', checkGuess);
+// checkGuess();
 
-checkGuess();
+// function setGameOver() {
+//     guessField.disabled = true;
+//     guessSubmit.disabled = true;
+//     resetButton = document.createElement('button');
+//     resetButton.textContent = 'Start new game';
+//     document.body.appendChild(resetButton);
+//     resetButton.addEventListener('click', resetGame);
+// }
 
-function setGameOver() {
-    guessField.disabled = true;
-    guessSubmit.disabled = true;
-    resetButton = document.createElement('button');
-    resetButton.textContent = 'Start new game';
-    document.body.appendChild(resetButton);
-    resetButton.addEventListener('click', resetGame);
-}
+// function resetGame() {
+//     guessCount = 1;
 
-function resetGame() {
-    guessCount = 1;
+//     let resetParas = document.querySelectorAll('.resultParas p');
+//     for (let i = 0; i < resetParas.length; i++) {
+//         resetParas[i].textContent = '';
+//     }
 
-    let resetParas = document.querySelectorAll('.resultParas p');
-    for (let i = 0; i < resetParas.length; i++) {
-        resetParas[i].textContent = '';
-    }
+//     resetButton.parentNode.removeChild(resetButton);
 
-    resetButton.parentNode.removeChild(resetButton);
+//     guessField.disabled = false;
+//     guessSubmit.disabled = false;
+//     guessField.value = '';
+//     guessField.focus();
 
-    guessField.disabled = false;
-    guessSubmit.disabled = false;
-    guessField.value = '';
-    guessField.focus();
+//     lastResult.style.backgroundColor = 'white';
 
-    lastResult.style.backgroundColor = 'white';
-
-    randomNumber = Math.floor(Math.random() * 100) + 1;
-}
+//     randomNumber = Math.floor(Math.random() * 100) + 1;
+// }
 
 // --------------------------------- Addition --------------------------------- //
 
@@ -133,7 +133,7 @@ btnResult.addEventListener('click', function () {
     }
 });
 
-// --------------------------------- Division --------------------------------- //
+// --------------------------------- Soustraction --------------------------------- //
 
 let firstValueSous = document.querySelector(".firstValueSous");
 let secondValueSous = document.querySelector(".secondValueSous");
@@ -208,3 +208,20 @@ btnResultMod.addEventListener('click', function () {
         resultMod.textContent = end;
     }
 });
+
+// --------------------------------- Démarrer machine --------------------------------- //
+
+const btnMachine = document.querySelector('.btn-machine');
+const txtMachine = document.querySelector('.txt-machine');
+
+btnMachine.addEventListener('click', updateBtn);
+
+function updateBtn() {
+  if (btnMachine.textContent === 'Démarrer la machine') {
+    btnMachine.textContent = 'Arrêter la machine';
+    txtMachine.textContent = 'La machine est en marche !';
+  } else {
+    btnMachine.textContent = 'Démarrer la machine';
+    txtMachine.textContent = 'La machine est arrêtée.';
+  }
+}

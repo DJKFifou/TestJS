@@ -19,22 +19,14 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-function Shape(x, y, velX, velY, exists) {
+function Ball(x, y, velX, velY, color, size) {
   this.x = x;
   this.y = y;
   this.velX = velX;
   this.velY = velY;
-  this.exists = exists;
+  this.color = color;
+  this.size = size;
 }
-
-function Ball(x, y, velX, velY, color, size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
-    this.color = color;
-    this.size = size;
-  }
 
 Ball.prototype.draw = function () {
   ctx.beginPath();
@@ -80,8 +72,8 @@ Ball.prototype.collisionDetect = function () {
 
 let balls = [];
 
-while (balls.length < 30) {
-  let size = random(2, 20);
+while (balls.length < 100) {
+  let size = random(10, 20);
   let ball = new Ball(
     // ball position always drawn at least one ball width
     // away from the edge of the canvas, to avoid drawing errors

@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../geoquizz"
+		},
+		{
+			"path": "../laburie.com"
+		},
+		{
+			"path": "../portfolio"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../experience-interactive-musba"
+		},
+		{
+			"path": "../../../../Downloads/gallery-start/gallery-start"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gallery-start"
+	}
+}
